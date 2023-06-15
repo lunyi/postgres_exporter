@@ -112,7 +112,7 @@ func (PGStatStatementsCollector) Update(ctx context.Context, db *sql.DB, ch chan
 		var blockReadSecondsTotal float64
 		var blockWriteSecondsTotal float64
 
-		if err := rows.Scan(&user, &datname, &queryid, &callsTotal, &secondsTotal, &rowsTotal, &blockReadSecondsTotal, &blockWriteSecondsTotal); err != nil {
+		if err := rows.Scan(&user, &datname, &queryid, &query, &callsTotal, &secondsTotal, &rowsTotal, &blockReadSecondsTotal, &blockWriteSecondsTotal); err != nil {
 			return err
 		}
 
